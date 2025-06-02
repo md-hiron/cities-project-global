@@ -22,10 +22,10 @@ export default function ServeSection() {
   ];
 
   return (
-    <section className="py-16 bg-white text-center">
-    <div className="container mx-auto">
-      <h2 className="text-2xl md:text-4xl font-bold mb-12">How We Serve You</h2>
-      <div className="flex flex-col md:flex-row items-center justify-center gap-14 px-4 md:px-0">
+    <section className="lg:py-[110px] py-16 bg-white text-center">
+    <div className="container mx-auto px-4">
+      <h2 className="text-2xl md:text-4xl font-sans font-bold mb-14">How We Serve You</h2>
+      <div className="flex flex-col lg:flex-row items-center justify-center gap-14 px-4 md:px-0">
         {services.map((item, idx) => (
           <div key={idx} className="max-w-xs text-center">
             <div className="w-[300px] h-[400px] mx-auto border-2 border-green-200 rounded-full overflow-hidden mb-4">
@@ -37,8 +37,8 @@ export default function ServeSection() {
                 className="w-full h-full"
               />
             </div>
-            <h3 className="text-lg font-semibold">{item.title}</h3>
-            <p className="text-sm text-gray-700 max-w-[180px] mx-auto">{item.description}</p>
+            <h3 className="text-2xl font-bold font-sans text-black">{item.title}</h3>
+            <p className="font-sans text-black max-w-[250px] mx-auto">{item.description}</p>
           </div>
         ))}
       </div>

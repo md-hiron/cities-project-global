@@ -17,13 +17,13 @@ export default function HeroSection() {
       </div>
 
       {/* Hero Text Content */}
-      <div className="container mx-auto pb-20 relative">
-        <h1 className="text-6xl font-extrabold leading-none uppercase">
+      <div className="container mx-auto pb-20 relative px-4">
+        <h1 className="font-display font-normal lg:text-[92px] text-6xl leading-none uppercase">
           Live Life <br />
           Purposefully
         </h1>
-        <div className="mt-4 text-sm tracking-wide">
-          <p className="font-semibold mb-4">We guide you to…</p>
+        <div className="mt-4 text-base font-sans tracking-wide">
+          <p className="font-bold mb-4">We guide you to…</p>
           <p>Live purposefully for your life</p>
           <p>Live purposefully for the world</p>
         </div>
