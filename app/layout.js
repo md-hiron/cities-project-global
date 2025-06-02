@@ -8,7 +8,7 @@ const inter = Inter({
 });
 
 const anton = Anton({
-  weight: "400", // required for Anton
+  weight: "400",
   variable: "--font-anton",
   subsets: ["latin"],
 });

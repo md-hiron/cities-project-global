@@ -3,7 +3,7 @@
 import { useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
-import { Menu, X } from 'lucide-react'; // Use any icon library or your SVG
+import { Menu, X } from 'lucide-react';
 
 export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -12,12 +12,11 @@ export default function Header() {
     <header className="absolute top-0 left-0 right-0 z-10 bg-transparent">
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between py-6 px-4 lg:px-0">
-          {/* Logo */}
+
           <div className="flex items-center space-x-2">
             <Image src="/logo.svg" alt="Cities Project Global" width={112} height={58} className="max-w-full" />
           </div>
 
-          {/* Hamburger (mobile only) */}
           <button
             className="lg:hidden text-white"
             onClick={() => setMenuOpen(!menuOpen)}
@@ -26,7 +25,6 @@ export default function Header() {
             {menuOpen ? <X size={28} /> : <Menu size={28} />}
           </button>
 
-          {/* Desktop Navigation */}
           <nav className="hidden lg:block">
             <ul className="flex text-sm font-light">
               {['Home', 'About', 'What We Do', 'Stories', 'Contact'].map((item) => (
@@ -42,7 +40,6 @@ export default function Header() {
             </ul>
           </nav>
 
-          {/* Language and Donate (Desktop only) */}
           <div className="hidden lg:flex items-center space-x-4">
             <button className="text-sm font-sans text-white flex items-center hover:text-[#A1CF5F]">
               <Image src="/globe.svg" width={20} height={20} className="mr-1" alt="Language" />
@@ -55,7 +52,6 @@ export default function Header() {
         </div>
       </div>
 
-      {/* Mobile Menu (Offcanvas) */}
       <div
         className={`lg:hidden fixed top-0 right-0 h-full w-64 bg-[#0a0a0a] text-white z-50 transform transition-transform ${
           menuOpen ? 'translate-x-0' : 'translate-x-full'
