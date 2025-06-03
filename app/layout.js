@@ -1,6 +1,7 @@
 import { Inter, Anton } from "next/font/google";
 
 import "./globals.css";
+import Footer from "./components/footer";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -25,6 +26,7 @@ export default function RootLayout({ children }) {
         className={`${inter.variable} ${anton.variable} antialiased`}
       >
         {children}
+        <Footer />
       </body>
     </html>
   );
