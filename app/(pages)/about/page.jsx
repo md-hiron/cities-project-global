@@ -151,7 +151,7 @@ export default function AboutUs() {
 
         <SpheresOfSociety />
 
-        <FoundersSection />
+        {/* <FoundersSection /> */}
 
         <Member title={boardData.sectionTitle} members={boardData.members} />
         <Member title={advisoryBoardData.sectionTitle} members={advisoryBoardData.members} padding="lg:pb-28: pb-16" />
