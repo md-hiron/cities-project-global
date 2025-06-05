@@ -1,13 +1,14 @@
 'use client';
 
 import { useState } from 'react';
+import { usePathname } from 'next/navigation';
 import Image from 'next/image';
 import Link from 'next/link';
 import { Menu, X } from 'lucide-react';
 
-// Header content as JSON at the top
+// JSON-like data defined at the top
 const headerData = {
-  logo: "/logo.svg",
+  logo: "/logo-alt.svg",
   languageIcon: "/globe.svg",
   languageText: "English",
   donateText: "Donate Now",
@@ -20,47 +21,51 @@ const headerData = {
   ]
 };
 
-export default function Header() {
+export default function InnerPageHeader() {
   const [menuOpen, setMenuOpen] = useState(false);
+  const pathname = usePathname();
 
   return (
-    <header className="absolute top-0 left-0 right-0 z-10 bg-transparent">
-      <div className="container mx-auto px-4">
-        <div className="flex items-center justify-between py-6 px-4 lg:px-0">
+    <header className="z-50 relative  mt-10">
+      <div className="container mx-auto">
+        <div className="flex items-center justify-between px-4 lg:px-0 border-y border-black">
 
-          {/* Logo */}
           <div className="flex items-center space-x-2">
-            <Image src={headerData.logo} alt="Cities Project Global" width={112} height={58} className="max-w-full" />
+            <Image src={headerData.logo} alt="Cities Project Global" width={80} height={46} className="max-w-full" />
           </div>
 
-          {/* Mobile Menu Toggle */}
           <button
-            className="lg:hidden text-white"
+            className="lg:hidden text-black"
             onClick={() => setMenuOpen(!menuOpen)}
             aria-label="Toggle Menu"
           >
             {menuOpen ? <X size={28} /> : <Menu size={28} />}
           </button>
 
-          {/* Desktop Menu */}
           <nav className="hidden lg:block">
             <ul className="flex text-sm font-light">
-              {headerData.navItems.map((item) => (
-                <li key={item.name}>
-                  <Link
-                    href={item.path}
-                    className="hover:text-[#A1CF5F] text-sm font-sans text-white block mx-3"
-                  >
-                    {item.name}
-                  </Link>
-                </li>
-              ))}
+              {headerData.navItems.map((item) => {
+                const isActive = pathname === item.path;
+                return (
+                  <li key={item.name}>
+                    <Link
+                      href={item.path}
+                      className={`block mx-3 text-sm font-sans py-5 px-6 ${
+                        isActive
+                          ? 'text-black font-bold bg-[#A1CF5F]'
+                          : 'text-black hover:bg-[#A1CF5F]'
+                      }`}
+                    >
+                      {item.name}
+                    </Link>
+                  </li>
+                );
+              })}
             </ul>
           </nav>
 
-          {/* Right Actions (desktop) */}
           <div className="hidden lg:flex items-center space-x-4">
-            <button className="text-sm font-sans text-white flex items-center hover:text-[#A1CF5F]">
+            <button className="text-sm font-sans text-black flex items-center hover:text-[#A1CF5F]">
               <Image src={headerData.languageIcon} width={20} height={20} className="mr-1" alt="Language" />
               {headerData.languageText}
             </button>
@@ -71,9 +76,8 @@ export default function Header() {
         </div>
       </div>
 
-      {/* Mobile Slide Menu */}
       <div
-        className={`lg:hidden fixed top-0 right-0 h-full w-64 bg-[#0a0a0a] text-white z-50 transform transition-transform ${
+        className={`lg:hidden fixed top-0 right-0 h-full w-64 bg-white text-black z-50 transform transition-transform ${
           menuOpen ? 'translate-x-0' : 'translate-x-full'
         }`}
       >
@@ -83,19 +87,26 @@ export default function Header() {
           </button>
         </div>
         <ul className="flex flex-col space-y-4 px-6 text-sm font-sans">
-          {headerData.navItems.map((item) => (
-            <li key={item.name}>
-              <Link
-                href={item.path}
-                className="block py-2 hover:text-[#A1CF5F]"
-                onClick={() => setMenuOpen(false)}
-              >
-                {item.name}
-              </Link>
-            </li>
-          ))}
+          {headerData.navItems.map((item) => {
+            const isActive = pathname === item.path;
+            return (
+              <li key={item.name}>
+                <Link
+                  href={item.path}
+                  className={`block py-2 px-2 ${
+                    isActive
+                      ? 'text-black font-bold bg-[#A1CF5F] rounded'
+                      : 'hover:text-[#A1CF5F]'
+                  }`}
+                  onClick={() => setMenuOpen(false)}
+                >
+                  {item.name}
+                </Link>
+              </li>
+            );
+          })}
           <li>
-            <button className="text-sm font-sans text-white flex items-center hover:text-[#A1CF5F]">
+            <button className="text-sm font-sans text-black flex items-center hover:text-[#A1CF5F]">
               <Image src={headerData.languageIcon} width={20} height={20} className="mr-2" alt="Language" />
               {headerData.languageText}
             </button>
