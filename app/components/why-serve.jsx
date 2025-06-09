@@ -1,8 +1,5 @@
-'use client'; // Only for App Router (Next.js 13+)
+import VideoBanner from "./sub-components/video-banner";
 
-import { useState } from 'react';
-import Image from 'next/image';
-import ReactPlayer from 'react-player/youtube';
 
 const serveContent = {
   backgroundImage: '/serve-bg.png',
@@ -15,8 +12,6 @@ const serveContent = {
 };
 
 export default function WhyWeServe() {
-  const [isOpen, setIsOpen] = useState(false);
-
   return (
     <section
       className="bg-cover bg-center lg:py-28 py-16"
@@ -34,40 +29,11 @@ export default function WhyWeServe() {
             {serveContent.emphasis}
           </p>
         </div>
-
-        {/* Clickable Banner Image */}
-        <div
-          className="mt-12 max-w-[950px] mx-auto cursor-pointer"
-          onClick={() => setIsOpen(true)}
-        >
-          <Image
-            src={serveContent.videoThumbnail}
-            width={950}
-            height={534}
-            alt="Banner video thumbnail"
-          />
-        </div>
-
-        {/* Modal */}
-        {isOpen && (
-          <div className="fixed inset-0 z-50 bg-black bg-opacity-80 flex items-center justify-center">
-            <div className="relative w-full max-w-4xl mx-auto aspect-video px-4">
-              <ReactPlayer
-                url={serveContent.videoUrl}
-                width="100%"
-                height="100%"
-                playing
-                controls
-              />
-              <button
-                className="absolute top-0 -right-3 text-white text-xl font-bold cursor-pointer"
-                onClick={() => setIsOpen(false)}
-              >
-                ✕
-              </button>
-            </div>
-          </div>
-        )}
+        
+        <VideoBanner
+          thumbnail={serveContent.videoThumbnail}
+          videoUrl={serveContent.videoUrl}
+        />
       </div>
     </section>
   );

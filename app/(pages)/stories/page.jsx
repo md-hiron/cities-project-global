@@ -1,5 +1,3 @@
-'use client';
-
 import Banner from "@/app/components/banner";
 import SocialMediaShowcase from "@/app/components/social-showcase";
 import StoriesBlog from "@/app/components/story-blog";

@@ -35,22 +35,23 @@ const alumniData = [
   },
 ];
 
-export default function VideoTestimony() {
+export default function LeaderTestimony() {
   const [activeVideo, setActiveVideo] = useState(null);
 
   return (
     <section className="py-16 lg:py-28 relative">
-      <h2 className="text-4xl font-sans font-bold text-center mb-2">
-        Living Purposefully for Your Life
-      </h2>
-      <p className="text-xl font-sans font-bold mb-14 text-center">
-        What Our Alumni Are Saying
-      </p>
+      <h2 className="text-4xl font-sans font-bold text-center mb-14 max-w-[660px] mx-auto">Watch Our Community Share Their Leadership Circle Experiences</h2>
 
       <AlumniSlider
         data={alumniData}
         onPlay={(videoUrl) => setActiveVideo(videoUrl)}
-        showControls={true}
+        showControls={false}
+        containerClass=''
+        perViewConfig={{
+            default: 3,
+            md: 2,
+            sm: 1,
+        }}
       />
 
       {activeVideo && (
