@@ -30,3 +30,23 @@ ul li,
 a{
   @apply font-sans;
 }
+
+.founder-info-text{
+  clip-path: polygon(18% 0, 100% 0, 100% 100%, 0% 100%);
+}
+
+@media (min-width: 768px){
+  .founder-card::before{
+    content: '';
+    display: block;
+    width: 75%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background: #263519;
+    z-index: 1;
+    clip-path: polygon(0 0, 100% 0, 68% 100%, 0% 100%);
+
+  }
+}

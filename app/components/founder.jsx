@@ -18,7 +18,7 @@ For the last 20+ years he has done pro-bono work with Christian organizations. H
       name: 'Hugh Brandt',
       title: 'Chief Culture Officer',
       image: '/founder-hugh.png',
-      bio: `Hugh has lived in 3 global cities for 40 years and has experienced first-hand the major problems cities have. In his book “Why God Made Cities”, Timothy Keller says, “If sin has twisted the city as it’s twisted the family, and God invented the city, then we don’t abandon it – we build it.” 
+      bio: `Hugh has lived in 3 global cities for 40 years and has experienced first-hand the major problems cities have. In his book “Why God Made Cities”, Timothy Keller says, “If sin has twisted the city as it’s twisted the family, and God invented the city, then we don’t abandon it – we build it.”
 
 He has experienced twisted problems of a city that can feel overwhelming and beyond repair. He has also experienced city leaders from different spheres of society successfully work together to address these problems when their collaborative efforts reflect a culture of love for one another. He believes in Isaiah 58:12: “You’ll be known as those who can fix anything, restore old ruins, rebuild and renovate, make the community livable again.”
 
@@ -34,39 +34,32 @@ export default function FoundersSection() {
         <h2 className="text-center text-4xl font-bold font-sans mb-16">
           {foundersData.sectionTitle}
         </h2>
-        <div className="grid lg:grid-cols-2 gap-12">
+        <div className="flex flex-wrap lg:-mx-5">
           {foundersData.items.map((founder, index) => (
             <div
               key={index}
-              className="relative bg-[#2c3a1c] text-white rounded-lg overflow-hidden flex flex-col lg:flex-row"
+              className="founder-card relative w-full lg:w-1/2 lg:px-5 max-lg:mb-10"
             >
-              {/* Text Section */}
-              <div className="w-full lg:w-1/2 p-8 z-10">
-                <p className="whitespace-pre-line font-sans text-sm md:text-base leading-relaxed">
-                  {founder.bio}
-                </p>
-              </div>
-
-              {/* Image Section with angled green background */}
-              <div className="w-full lg:w-1/2 relative">
-                {/* Green diagonal overlay */}
-                <div className="absolute top-0 right-0 w-full h-full bg-[#a1cf5f] skew-x-[-15deg] origin-left z-0"></div>
-
-                {/* Image */}
-                <div className="relative z-10">
+              <div className="md:flex bg-[#A1CF5F] h-full items-center">
+                <div className="w-full p-5 max-lg:py-14 relative z-10 max-md:bg-[#263519]">
+                  <p className="whitespace-pre-line text-white leading-relaxed">
+                    {founder.bio}
+                  </p>
+                </div>
+                <div className="w-full self-end relative">
                   <Image
                     src={founder.image}
                     alt={founder.name}
-                    width={500}
-                    height={600}
+                    width={400}
+                    height={500}
                     className="w-full h-full object-cover"
                   />
-                </div>
-
-                {/* Nameplate */}
-                <div className="absolute bottom-0 left-0 w-full bg-[#a1cf5f] px-6 py-4 z-20">
-                  <h3 className="text-black font-bold text-xl">{founder.name}</h3>
-                  <p className="text-black text-sm">{founder.title}</p>
+                  <div className="absolute w-full ml-auto h-20 bg-[#A1CF5F] left-0 bottom-0">
+                    <div className="founder-info-text absolute p-3 lg:pl-14 md:pl-24 pl-20 w-4/5 h-28 right-0 bottom-4 bg-[#A1CF5F]">
+                      <h3 className="font-sans font-bold text-3xl text-[#263519]">{founder.name}</h3>
+                      <p className="text-lg">{founder.title}</p>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
