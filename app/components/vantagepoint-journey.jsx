@@ -1,5 +1,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
+import ExcerptTabs from './sub-components/excerpt-tab';
+import { ArrowUpRight } from 'lucide-react';
 
 const journeyData = {
   title: 'Overview of Your VantagePoint™ Journey',
@@ -33,67 +35,80 @@ const journeyData = {
 
 export default function VantagePointJourney() {
   return (
-    <section className="bg-white text-black">
-      {/* Header Section */}
-      <div className="flex flex-wrap">
-        <div className="w-full md:w-1/2">
-          <Image src="/people-group.jpg" alt="Happy Group" width={800} height={600} className="w-full h-full object-cover" />
-        </div>
-        <div className="w-full md:w-1/2 flex flex-col justify-center px-6 py-8">
-          <h2 className="text-3xl md:text-5xl font-bold mb-4">{journeyData.title}</h2>
-          <Image src="/cities-logo.svg" alt="Cities Project Global" width={120} height={40} className="mb-6" />
-          <p className="text-lg text-gray-700 mb-4 max-w-md">{journeyData.intro}</p>
-          <Image src="/group-session.jpg" alt="Discussion Group" width={400} height={300} className="rounded" />
-        </div>
-      </div>
-
-      {/* Contents Panel */}
-      <div className="bg-[#2c441f] text-white p-6 md:absolute right-10 top-[500px] w-[300px] rounded-md z-10">
-        {journeyData.contentModules.map((module, idx) => (
-          <div key={idx} className="mb-6">
-            <h4 className="text-md font-bold">{module.title}</h4>
-            <p className="italic text-sm mb-2">{module.subtitle}</p>
-            <ul className="list-disc list-inside text-sm">
-              {module.sessions.map((session, i) => (
-                <li key={i}>{session}</li>
-              ))}
-            </ul>
+    <section className="vantagepoint-journey">
+      <div className="container mx-auto px-4">
+        <div className="flex flex-wrap">
+          <div className="lg:w-1/4 w-full">
+            <Image
+              src="/happy-group.jpg"
+              width={356}
+              height={786}
+              className="w-full h-full"
+            />
           </div>
-        ))}
-      </div>
-
-      {/* Excerpt Section */}
-      <div className="relative">
-        <Image
-          src="/beach-scene.jpg"
-          alt="Beach with rocks"
-          width={1600}
-          height={800}
-          className="w-full object-cover"
-        />
-        <div className="absolute inset-0 bg-black bg-opacity-60 text-white p-8 lg:p-20">
-          <h3 className="text-xl font-light">Excerpt</h3>
-          <h2 className="text-2xl md:text-3xl font-bold text-lime-400 mb-6">{journeyData.excerpt.module}</h2>
-          {journeyData.excerpt.text.map((para, idx) => (
-            <p key={idx} className="mb-4 text-sm md:text-base max-w-3xl">{para}</p>
-          ))}
-          <div className="mt-8">
-            <Link
-              href="#"
-              className="inline-block bg-lime-500 hover:bg-lime-600 text-black font-semibold py-2 px-6 rounded"
-            >
-              Join Our Community of Culturemakers ↗
-            </Link>
+          <div className="lg:w-2/4 w-full border-y border-[#E8E8E8]">
+            <div className="md:flex justify-between w-full items-start px-12 py-16 lg:h-1/2 border-b border-[#E8E8E8]">
+              <h2 className="font-sans font-bold text-3xl lg:text-5xl max-w-[430px] md:mr-4 max-md:mb-4 max-lg:text-center">Overview of Your VantagePoint™
+              Journey</h2>
+              <Image 
+                src="/logo-alt.svg"
+                width={136}
+                height={78}
+                className="max-lg:mx-auto"
+              />
+            </div>
+            <div className="px-12 py-16 lg:h-1/2 relative">
+              <p className="max-w-[410px] mx-auto max-lg:mb-5 max-lg:text-center">VantagePoint™ is divided into three  modules, containing three sessions each. The session chapters are two to three pages long, concluding with a set of questions to facilitate  discussion.</p>
+              <Image 
+                src="/group-meeting.jpg"
+                width={360}
+                height={390}
+                className="lg:absolute -bottom-1/2 right-0 max-lg:mx-auto"
+              />
+            </div>
+          </div>
+          <div className="lg:w-1/4 w-full bg-[#263519]">
+            <h3 className="py-10 px-8 font-sans text-white font-semibold lg:text-2xl text-xl border-b border-[#385024]">Content</h3>
+            { journeyData.contentModules.map( ( module, index ) => (
+              <div className="py-10 px-8 border-b border-[#385024]" key={index}>
+                <h4 className="font-sans font-semibold text-base text-[#A1CF5F]">
+                  <span className="block">{module.title}:</span>
+                  {module.subtitle}
+                </h4>
+                <div className="w-10 h-1 bg-white my-3"></div>
+                <div className="">
+                  {module.sessions.map( (data, index) => (
+                    <div className="font-sans text-base text-white" key={index}>
+                      <span className='mr-1'>Session {index}: </span>
+                      {data}
+                    </div>
+                  ) )}
+                </div>
+              </div>
+            ) ) }
           </div>
         </div>
-      </div>
-
-      {/* Bottom Tabs Placeholder */}
-      <div className="bg-black text-white text-center py-4">
-        <div className="flex justify-center space-x-6 text-lime-400">
-          <span className="font-bold">Module One</span>
-          <span>Module Two</span>
-          <span>Module Three</span>
+        <div className="beach bg-[url(/beach-hero.jpg)] bg-no-repeat bg-cover bg-top-left bg-[#030305] border-b-8 border-[#A1CF5F]">
+            <div className="lg:h-[660px] h-[330px]"></div>
+            <div className="lg:flex justify-between items-end p-16">
+              <div className="max-w-[545px] lg:px-4 max-lg:mb-8">
+                <ExcerptTabs />
+              </div>
+              <div className="max-w-[440px] lg:px-4">
+                <h2 className="text-4xl md:text-6xl font-display font-normal text-white leading-tight uppercase mb-10">
+                  Join Our <br />
+                  Community of <br />
+                  Culturemakers
+                </h2>
+                <a
+                  href="#"
+                  className="inline-flex items-center gap-2 bg-[#A1CF5F] text-black font-bold font-sans px-6 py-3 rounded-md text-sm md:text-base hover:bg-[#8fba50] transition"
+                >
+                  Join Our Community of Culturemakers
+                  <ArrowUpRight size={18} />
+                </a>
+              </div>
+            </div>
         </div>
       </div>
     </section>

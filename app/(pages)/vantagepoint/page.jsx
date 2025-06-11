@@ -10,7 +10,7 @@ export default function Vantagepoint() {
     <>
        <VantagePointSection />
        <VoicesOfChangeSection />
-       {/* <VantagePointJourney /> */}
+       <VantagePointJourney />
        <SmallGroupSeries />
        <VantagePointPricing />
        <Subscribe />
