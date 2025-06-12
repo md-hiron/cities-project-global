@@ -1,6 +1,5 @@
 import Image from 'next/image';
 
-// ✅ All content in a JSON-style data object
 const foundersData = {
   sectionTitle: 'Founders',
   items: [
@@ -31,7 +30,7 @@ export default function FoundersSection() {
   return (
     <section className="py-20 bg-white">
       <div className="container mx-auto px-4">
-        <h2 className="text-center text-4xl font-bold font-sans mb-16">
+        <h2 className="text-center text-4xl font-bold  mb-16">
           {foundersData.sectionTitle}
         </h2>
         <div className="flex flex-wrap lg:-mx-5">
@@ -56,7 +55,7 @@ export default function FoundersSection() {
                   />
                   <div className="absolute w-full ml-auto h-20 bg-[#A1CF5F] left-0 bottom-0">
                     <div className="founder-info-text absolute p-3 lg:pl-14 md:pl-24 pl-20 w-4/5 h-28 right-0 bottom-4 bg-[#A1CF5F]">
-                      <h3 className="font-sans font-bold text-3xl text-[#263519]">{founder.name}</h3>
+                      <h3 className=" font-bold text-3xl text-[#263519]">{founder.name}</h3>
                       <p className="text-lg">{founder.title}</p>
                     </div>
                   </div>

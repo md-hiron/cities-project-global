@@ -23,19 +23,19 @@ export default function QuoteSection() {
         <div className="flex flex-wrap lg:-mx-4">
           {/* Text Content */}
           <div className="lg:w-1/2 w-full lg:px-4 max-lg:mb-8">
-            <h2 className="text-2xl md:text-5xl font-display font-normal text-[#252525] tracking-tight leading-tight mb-6 whitespace-pre-line">
+            <h2 className="text-2xl md:text-5xl !font-display font-normal text-[#252525] tracking-tight leading-tight mb-6 whitespace-pre-line">
               {quoteContent.heading}
             </h2>
-            <p className="text-base font-sans leading-relaxed mb-6 max-w-[660px]">
+            <p className="text-base  leading-relaxed mb-6 max-w-[660px]">
               {quoteContent.paragraph}
             </p>
             <div className="flex">
               <div className="w-10 mr-5 mt-3 border-t border-black"></div>
               <div>
-                <p className="font-sans font-bold text-xl">
+                <p className=" font-bold text-xl">
                   {quoteContent.citation.author}
                 </p>
-                <p className="font-sans text-base">
+                <p className=" text-base">
                   {quoteContent.citation.source}
                 </p>
               </div>

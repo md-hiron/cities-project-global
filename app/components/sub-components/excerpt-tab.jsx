@@ -37,7 +37,7 @@ export default function ExcerptTabs() {
 
   return (
     <div className="excerpt-tab-wrap">
-      <h2 className="text-3xl lg:text-5xl font-sans font-bold mb-6 text-white">
+      <h2 className="text-3xl lg:text-5xl  font-bold mb-6 text-white">
         Excerpt <span className="text-[#A1CF5F] block">{tabData[activeTab].content.heading}</span>
       </h2>
 
@@ -51,7 +51,7 @@ export default function ExcerptTabs() {
           <button
             key={index}
             onClick={() => setActiveTab(index)}
-            className={`excerpt-tab-button text-sm font-sans font-bold block w-full transition py-2 relative ${
+            className={`excerpt-tab-button text-sm  font-bold block w-full transition py-2 relative ${
               activeTab === index
                 ? 'text-[#A1CF5F] border-t-4 border-[#A1CF5F] before:content-[""] before:block before:absolute before:left-1/2 before:-top-[9px] before:-translate-x-1/2 before:border-l-8 before:border-b-8 before:border[#A1CF5F] before:rotate-45'
                 : 'text-white border-t-4 border-[#E0E0E0]'

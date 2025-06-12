@@ -1,5 +1,3 @@
-'use client';
-
 import Image from 'next/image';
 
 const content = {
@@ -22,12 +20,12 @@ export default function Inquery() {
   return (
     <section className="lg:py-28 py-16">
       <div className="container mx-auto px-4 text-center">
-        <h2 className="text-3xl lg:text-5xl font-bold font-sans whitespace-pre-line mb-6 max-w-[910px] mx-auto">
+        <h2 className="text-3xl lg:text-5xl font-bold  whitespace-pre-line mb-6 max-w-[910px] mx-auto">
           {content.message}
         </h2>
         <a
           href={content.button.link}
-          className="inline-block mt-2 bg-[#A1CF5F] text-black text-sm px-6 py-3 rounded font-bold font-sans transition hover:bg-[#91ba55]"
+          className="inline-block mt-2 bg-[#A1CF5F] text-black text-sm px-6 py-3 rounded font-bold  transition hover:bg-[#91ba55]"
         >
           {content.button.text} <span className="ml-1">{content.button.icon}</span>
         </a>

@@ -35,12 +35,12 @@ export default function VantagePointPricing() {
                 {/* Middle Pricing Section */}
                 <div className="w-full lg:w-2/4 bg-[#F5F0D6]">
                     <div className="bg-[#263519] text-center text-white px-8 py-20 relative border-b-[6px] border-[#A1CF5F]">
-                        <h2 className="lg:text-[96px] text-6xl font-normal font-display text-[#A1CF5F] mb-2">{pricingContent.price}</h2>
-                        <h3 className="text-4xl font-normal font-display text-white mb-4">{pricingContent.product}</h3>
+                        <h2 className="lg:text-[96px] text-6xl font-normal !font-display text-[#A1CF5F] mb-2">{pricingContent.price}</h2>
+                        <h3 className="text-4xl font-normal !font-display text-white mb-4">{pricingContent.product}</h3>
                         <p className="text-xl mb-6">{pricingContent.description}</p>
                         <Link
                             href={pricingContent.button.link}
-                            className="inline-block bg-[#A1CF5F] text-black font-bold py-3 px-6 font-sans rounded"
+                            className="inline-block bg-[#A1CF5F] text-black font-bold py-3 px-6  rounded"
                         >
                             {pricingContent.button.text} <span className="ml-1">↗</span>
                         </Link>
@@ -48,7 +48,7 @@ export default function VantagePointPricing() {
                     
 
                     {/* Note Area */}
-                    <div className="font-sans text-left text-sm px-4 py-8 w-full">
+                    <div className=" text-left text-sm px-4 py-8 w-full">
                         <span className="font-bold block mb-1">Note:</span>
                         {pricingContent.note}
                     </div>

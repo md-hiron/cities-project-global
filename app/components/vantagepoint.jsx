@@ -31,7 +31,7 @@ export default function VantagePointSection() {
                 <p>{vantageData.quote.author}</p>
             </div>
             <div>
-                <h2 className="text-3xl lg:text-4xl font-sans font-bold lg:text-right whitespace-pre-line">{vantageData.heading}</h2>
+                <h2 className="text-3xl lg:text-4xl  font-bold lg:text-right whitespace-pre-line">{vantageData.heading}</h2>
             </div>
         </div>
         <div
@@ -41,12 +41,12 @@ export default function VantagePointSection() {
           
           <div className="relative z-10 flex flex-wrap items-center justify-end min-h-[400px] p-6 md:p-12">
             <div className="bg-white p-6 md:p-8 rounded-md text-left max-w-sm shadow-lg">
-              <h3 className="text-2xl font-sans font-semibold mb-2">{vantageData.offer.title}</h3>
+              <h3 className="text-2xl  font-semibold mb-2">{vantageData.offer.title}</h3>
               <p className="mb-4">{vantageData.offer.description}</p>
-              <div className="text-4xl font-sans font-bold text-black mb-4">{vantageData.offer.price}</div>
+              <div className="text-4xl  font-bold text-black mb-4">{vantageData.offer.price}</div>
               <Link
                 href={vantageData.offer.button.link}
-                className="inline-block bg-[#A1CF5F] px-6 py-3 rounded font-sans font-bold text-sm"
+                className="inline-block bg-[#A1CF5F] px-6 py-3 rounded  font-bold text-sm"
               >
                 {vantageData.offer.button.label} <span className="ml-1">↗</span>
               </Link>

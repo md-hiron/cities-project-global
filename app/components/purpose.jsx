@@ -13,7 +13,7 @@ export default function PurposeSection() {
   return (
     <section className="lg:py-28 py016">
       <div className="container mx-auto px-4">
-        <h2 className="text-4xl md:text-6xl font-sans font-bold whitespace-pre-line text-center mb-14">
+        <h2 className="text-4xl md:text-6xl  font-bold whitespace-pre-line text-center mb-14">
           {sectionData.title}
         </h2>
 
@@ -27,7 +27,7 @@ export default function PurposeSection() {
           />
         </div>
 
-        <p className="font-sans text-2xl">
+        <p className=" text-2xl">
           {sectionData.testimonial}{' '}
           <span className="font-bold">
             ~ {sectionData.name}, {sectionData.location}

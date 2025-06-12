@@ -25,7 +25,7 @@ export default function SmallGroupSeries() {
                 </div>
                 <div className="w-full md:w-2/3 md:px-1">
                     <div className="lg:py-20 lg:px-16 md:p-10 p-5 bg-[#F8F8F8] rounded mb-2">
-                        <h2 className="lg:text-5xl text-3xl font-sans font-bold mb-5">{contentData.heading}</h2>
+                        <h2 className="lg:text-5xl text-3xl  font-bold mb-5">{contentData.heading}</h2>
                         <p className="mb-4">{contentData.description}</p>
                         <p>{contentData.extraText}</p>
                     </div>

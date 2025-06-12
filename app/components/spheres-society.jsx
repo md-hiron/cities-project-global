@@ -13,7 +13,7 @@ const spheres = [
 export default function SpheresOfSociety() {
   return (
     <section className="lg:pb-28 pb-16 text-center">
-      <h2 className="text-2xl md:text-4xl font-sans font-bold mb-14">Spheres of Society</h2>
+      <h2 className="text-2xl md:text-4xl  font-bold mb-14">Spheres of Society</h2>
       <div className="bg-[url(/society-bg.png)]">
         <div className="container mx-auto px-4">
           <div className="flex max-lg:flex-wrap w-full">
@@ -30,7 +30,7 @@ export default function SpheresOfSociety() {
                     />
                   </div>
                   
-                  <span className="text-xl font-sans font-medium">{sphere.name}</span>
+                  <span className="text-xl  font-medium">{sphere.name}</span>
                 </div>
               </div>
             ))}

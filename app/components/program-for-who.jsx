@@ -1,5 +1,3 @@
-'use client';
-
 import Image from 'next/image';
 import {
   FaFacebookF,
@@ -39,12 +37,12 @@ export default function ProgramForWho() {
   return (
     <section className="lg:py-28 py-16">
       <div className="container mx-auto px-4">
-        <h2 className="text-3xl lg:text-5xl font-bold font-sans mb-14 max-w-[500px]">
+        <h2 className="text-3xl lg:text-5xl font-bold  mb-14 max-w-[500px]">
           {content.heading}
         </h2>
         <div className="flex flex-wrap lg:-mx-8 mb-20">
           {content.columns.map((col, index) => (
-            <div key={index} className="lg:w-1/2 w-full lg:px-8 mb-10 lg:mb-0 whitespace-pre-line text-base leading-relaxed font-sans text-black">
+            <div key={index} className="lg:w-1/2 w-full lg:px-8 mb-10 lg:mb-0 whitespace-pre-line text-base leading-relaxed  text-black">
               {col}
             </div>
           ))}
@@ -53,7 +51,7 @@ export default function ProgramForWho() {
         {/* Social Section */}
         <div className="flex flex-wrap lg:-mx-4 items-center">
           <div className="lg:w-1/2 w-full lg:px-4 mb-10 lg:mb-0">
-            <h3 className="text-base font-sans font-bold mb-2">
+            <h3 className="text-base  font-bold mb-2">
               {content.socialSection.heading}
             </h3>
             <hr className="border-black w-2/3 mb-4" />

@@ -1,5 +1,3 @@
-'use client';
-
 import Image from 'next/image';
 
 const heroContent = {
@@ -25,10 +23,10 @@ export default function HeroSection() {
         />
       </div>
       <div className="container mx-auto pb-20 relative px-4">
-        <h1 className="font-display font-normal lg:text-[92px] text-6xl leading-none uppercase whitespace-pre-line">
+        <h1 className="!font-display font-normal lg:text-[92px] text-6xl leading-none uppercase whitespace-pre-line">
           {heroContent.heading}
         </h1>
-        <div className="mt-4 text-base font-sans tracking-wide">
+        <div className="mt-4 text-base  tracking-wide">
           <p className="font-bold mb-4">{heroContent.lead}</p>
           {heroContent.subpoints.map((point, idx) => (
             <p key={idx}>{point}</p>

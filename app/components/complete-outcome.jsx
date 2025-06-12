@@ -1,5 +1,3 @@
-'use client';
-
 import Image from 'next/image';
 
 const outcomesContent = {
@@ -21,7 +19,7 @@ export default function CompletionOutcomes() {
     <section className="py-16 lg:py-28">
       <div className="container mx-auto px-4">
         {/* Heading */}
-        <h2 className="text-3xl lg:text-5xl font-sans font-bold mb-12 max-w-[450px]">
+        <h2 className="text-3xl lg:text-5xl  font-bold mb-12 max-w-[450px]">
           {outcomesContent.heading}
         </h2>
 

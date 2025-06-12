@@ -73,8 +73,8 @@ export default function CityPhases() {
           >
             {/* Text Section */}
             <div className="w-full lg:w-2/3 lg:px-8 mb-8 lg:mb-0">
-              <h3 className="text-3xl font-sans font-bold mb-6">{section.title}</h3>
-              <div className="space-y-4 text-base font-sans">
+              <h3 className="text-3xl  font-bold mb-6">{section.title}</h3>
+              <div className="space-y-4 text-base ">
                 {section.content.map((item, i) => (
                   <p key={i}>
                     <strong>{item.heading}:</strong> {item.text}

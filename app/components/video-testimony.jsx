@@ -40,10 +40,10 @@ export default function VideoTestimony() {
 
   return (
     <section className="py-16 lg:py-28 relative">
-      <h2 className="text-4xl font-sans font-bold text-center mb-2">
+      <h2 className="text-4xl  font-bold text-center mb-2">
         Living Purposefully for Your Life
       </h2>
-      <p className="text-xl font-sans font-bold mb-14 text-center">
+      <p className="text-xl  font-bold mb-14 text-center">
         What Our Alumni Are Saying
       </p>
 

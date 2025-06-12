@@ -1,5 +1,3 @@
-'use client';
-
 import Image from 'next/image';
 import Link from 'next/link';
 
@@ -37,7 +35,7 @@ export default function Footer() {
               <Link
                 href="#"
                 key={idx}
-                className={`hover:underline font-sans text-sm ${
+                className={`hover:underline  text-sm ${
                   idx === 0 ? 'font-bold' : ''
                 }`}
               >
@@ -50,7 +48,7 @@ export default function Footer() {
               <Link
                 href="#"
                 key={idx}
-                className="hover:underline font-sans text-sm font-bold"
+                className="hover:underline  text-sm font-bold"
               >
                 {item}
               </Link>
@@ -64,11 +62,11 @@ export default function Footer() {
         <div className="flex flex-wrap justify-between gap-8 text-sm">
           {/* Programs */}
           <div>
-            <h4 className="font-sans font-bold text-base mb-5">Programs</h4>
+            <h4 className=" font-bold text-base mb-5">Programs</h4>
             <ul className="space-y-3">
               {footerData.programs.map((link, i) => (
                 <li key={i}>
-                  <Link href={link.href} className="underline font-sans text-sm">
+                  <Link href={link.href} className="underline  text-sm">
                     {link.label}
                   </Link>
                 </li>
@@ -78,11 +76,11 @@ export default function Footer() {
 
           {/* About the Book */}
           <div>
-            <h4 className="font-sans font-bold text-base mb-5">About the Book</h4>
+            <h4 className=" font-bold text-base mb-5">About the Book</h4>
             <ul className="space-y-3">
               {footerData.book.map((link, i) => (
                 <li key={i}>
-                  <Link href={link.href} className="underline font-sans text-sm">
+                  <Link href={link.href} className="underline  text-sm">
                     {link.label}
                   </Link>
                 </li>
@@ -103,11 +101,11 @@ export default function Footer() {
 
           {/* Stay Connected */}
           <div>
-            <h4 className="font-sans font-bold text-base mb-5">Stay Connected</h4>
+            <h4 className=" font-bold text-base mb-5">Stay Connected</h4>
             <ul className="space-y-3">
               {footerData.social.map((link, i) => (
                 <li key={i}>
-                  <Link href={link.href} className="underline font-sans text-sm">
+                  <Link href={link.href} className="underline  text-sm">
                     {link.label}
                   </Link>
                 </li>
@@ -120,12 +118,12 @@ export default function Footer() {
             <ul className="space-y-3 text-right">
               {footerData.legal.map((link, i) => (
                 <li key={i}>
-                  <Link href={link.href} className="underline font-sans text-sm">
+                  <Link href={link.href} className="underline  text-sm">
                     {link.label}
                   </Link>
                 </li>
               ))}
-              <li className="font-sans text-sm">{footerData.copyright}</li>
+              <li className=" text-sm">{footerData.copyright}</li>
             </ul>
           </div>
         </div>

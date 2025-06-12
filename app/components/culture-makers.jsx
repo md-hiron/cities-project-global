@@ -1,5 +1,3 @@
-import Image from "next/image";
-
 const cultureCards = [
   {
     title: "People Create Culture",
@@ -25,7 +23,7 @@ export default function CultureMakersSection() {
   return (
     <section className="py-10 bg-[url(/culture-bg.png)] bg-bottom bg-no-repeat">
       <div className="container mx-auto text-center px-4">
-        <h2 className="text-2xl md:text-4xl font-sans font-bold mb-14">
+        <h2 className="text-2xl md:text-4xl  font-bold mb-14">
           Jesus-Followers Should Be Culture Makers
         </h2>
 
@@ -41,8 +39,8 @@ export default function CultureMakersSection() {
                     : "text-center"
                 } max-w-[350px] mx-auto`}
               >
-                <h3 className="font-sans font-bold text-lg mb-4">{card.title}</h3>
-                <p className="text-lg font-sans leading-relaxed">{card.description}</p>
+                <h3 className=" font-bold text-lg mb-4">{card.title}</h3>
+                <p className="text-lg  leading-relaxed">{card.description}</p>
               </div>
             </div>
           ))}

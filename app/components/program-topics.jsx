@@ -15,10 +15,10 @@ export default function ProgramTopics() {
             {/* Left Content */}
             <div className="w-full lg:w-1/2 lg:px-4 mb-12 lg:mb-0">
                 <div className="max-w-[580px] mx-auto text-center">
-                    <h2 className="text-3xl lg:text-5xl font-bold mb-6 font-sans">
+                    <h2 className="text-3xl lg:text-5xl font-bold mb-6 ">
                         {programTopics.heading}
                     </h2>
-                    <p className="font-sans">
+                    <p className="">
                         {programTopics.description}
                     </p>
                 </div>

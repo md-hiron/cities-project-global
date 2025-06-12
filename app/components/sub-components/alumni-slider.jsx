@@ -91,8 +91,8 @@ export default function AlumniSlider({
                 </div>
               </div>
               <div className={`w-1/2 p-4 flex flex-col justify-center ${alumnus.bg} text-left`}>
-                <h3 className="font-bold font-sans text-lg">{alumnus.name}</h3>
-                <p className="text-sm font-sans">{alumnus.location}</p>
+                <h3 className="font-bold  text-lg">{alumnus.name}</h3>
+                <p className="text-sm ">{alumnus.location}</p>
               </div>
             </div>
           ))}

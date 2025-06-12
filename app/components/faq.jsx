@@ -46,7 +46,7 @@ export default function FAQs() {
   return (
     <section className="py-16 lg:pb-28">
       <div className="container mx-auto px-4">
-        <h2 className="text-3xl lg:text-4xl font-sans font-bold mb-14">Essential Tips for Success</h2>
+        <h2 className="text-3xl lg:text-4xl  font-bold mb-14">Essential Tips for Success</h2>
 
 
         {/* Accordion Panels */}
@@ -54,7 +54,7 @@ export default function FAQs() {
           <div key={index} className="border-b border-black max-w-[700px]">
             <button
               onClick={() => toggleIndex(index)}
-              className="w-full flex justify-between items-center py-4 text-left cursor-pointer font-sans font-semibold hover:text-[#A1CF5F] transition"
+              className="w-full flex justify-between items-center py-4 text-left cursor-pointer  font-semibold hover:text-[#A1CF5F] transition"
             >
               <span>{tip.title}</span>
               {activeIndex === index ? (
@@ -64,7 +64,7 @@ export default function FAQs() {
               )}
             </button>
             {activeIndex === index && (
-              <div className="pb-4 font-sans">{tip.content}</div>
+              <div className="pb-4 ">{tip.content}</div>
             )}
           </div>
         ))}

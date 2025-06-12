@@ -4,7 +4,7 @@ export default function Member({title, members, padding = 'lg:py-28 py-16'}) {
   return (
     <section className={padding}>
       <div className="container mx-auto px-4">
-        <h2 className="text-4xl font-sans font-bold text-center mb-14">{title}</h2>
+        <h2 className="text-4xl  font-bold text-center mb-14">{title}</h2>
 
         <div className="flex flex-wrap lg:-mx-4">
           {members.map((member, idx) => (
@@ -19,9 +19,9 @@ export default function Member({title, members, padding = 'lg:py-28 py-16'}) {
                   />
                 </div>
                 <div className="p-4 flex flex-col grow">
-                  <h3 className="text-lg font-sans font-semibold text-[#282828] mb-1">{member.name}</h3>
-                  <p className="text-sm font-sans text-[#5F6980] mb-2">{member.role}</p>
-                  <p className="text-sm font-sans text-[#5F6980]">{member.bio}</p>
+                  <h3 className="text-lg  font-semibold text-[#282828] mb-1">{member.name}</h3>
+                  <p className="text-sm  text-[#5F6980] mb-2">{member.role}</p>
+                  <p className="text-sm  text-[#5F6980]">{member.bio}</p>
                 </div>
               </div>
             </div>

@@ -1,5 +1,4 @@
-'use client';
-
+"use client"
 import { useState } from 'react';
 import Image from 'next/image';
 
@@ -53,10 +52,10 @@ export default function StoriesBlog() {
       <div className="container mx-auto px-16">
         {/* Heading */}
         <div className="text-center mb-14">
-          <h2 className="text-3xl lg:text-5xl font-sans font-bold text-center mb-3">
+          <h2 className="text-3xl lg:text-5xl  font-bold text-center mb-3">
             {headerContent.title}
           </h2>
-          <p className="text-3xl font-semibold font-sans whitespace-pre-line">
+          <p className="text-3xl font-semibold  whitespace-pre-line">
             {headerContent.subtitle}
           </p>
         </div>
@@ -66,7 +65,7 @@ export default function StoriesBlog() {
             <input
                 type="text"
                 placeholder="Search"
-                className="w-full border-b border-black bg-transparent py-1 pr-10 focus:outline-none font-sans text-xl placeholder:text-xl placeholder:text-black"
+                className="w-full border-b border-black bg-transparent py-1 pr-10 focus:outline-none  text-xl placeholder:text-xl placeholder:text-black"
                 value={search}
                 onChange={(e) => setSearch(e.target.value)}
             />
@@ -90,7 +89,7 @@ export default function StoriesBlog() {
                 <div className="mb-3" key={filter}>
                     <button
                         onClick={() => setActiveFilter(filter)}
-                        className={`px-4 py-1 rounded-full border text-sm transition inline-block cursor-pointer font-sans ${
+                        className={`px-4 py-1 rounded-full border text-sm transition inline-block cursor-pointer  ${
                             activeFilter === filter
                             ? 'text-[#A1CF5F] font-semibold border-[#A1CF5F]'
                             : 'border-black text-black hover:bg-gray-100'
@@ -118,7 +117,7 @@ export default function StoriesBlog() {
                       className="object-cover"
                     />
                   </div>
-                  <p className="text-lg font-sans font-semibold">
+                  <p className="text-lg  font-semibold">
                     {story.title}
                   </p>
                 </div>

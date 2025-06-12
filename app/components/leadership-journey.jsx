@@ -1,5 +1,3 @@
-'use client';
-
 import Image from 'next/image';
 import Link from 'next/link';
 import { FileText, ExternalLink } from 'lucide-react';
@@ -58,11 +56,11 @@ export default function LeadershipJourney() {
                     <div className="border-b border-[#323232] w-full h-[1px]"></div>
                 </div>
                 <p className="fon-sans text-center mb-4">{journeyData.verse}</p>
-                <p className="font-sans text-center mb-8">{journeyData.description}</p>
+                <p className=" text-center mb-8">{journeyData.description}</p>
                 <div className="text-center">
                     <Link
                         href={journeyData.buttonUrl}
-                        className="inline-flex items-center bg-[#A1CF5F] text-black px-6 py-3 font-bold font-sans text-sm rounded hover:bg-[#b3e77d] transition"
+                        className="inline-flex items-center bg-[#A1CF5F] text-black px-6 py-3 font-bold  text-sm rounded hover:bg-[#b3e77d] transition"
                         >
                         {journeyData.buttonText}
                         <ExternalLink className="ml-2 w-4 h-4" />
@@ -88,11 +86,11 @@ export default function LeadershipJourney() {
                     key={index}
                     className={`relative p-5 pt-8 w-[300px] rounded shadow-md max-md:mx-auto max-md:mt-5 ${card.bg}`}
                 >
-                    <h3 className="font-bold font-sans text-2xl mb-1">{card.title}</h3>
-                    <p className="font-sans mb-3">{card.description}</p>
+                    <h3 className="font-bold  text-2xl mb-1">{card.title}</h3>
+                    <p className=" mb-3">{card.description}</p>
                     <Link
                     href={card.linkUrl}
-                    className={`inline-flex items-center text-sm font-sans font-bold px-6 py-3 rounded hover:bg-[#b3e77d] transition ${card.buttonBg} ${card.buttonTextColor}`}
+                    className={`inline-flex items-center text-sm  font-bold px-6 py-3 rounded hover:bg-[#b3e77d] transition ${card.buttonBg} ${card.buttonTextColor}`}
                     >
                     {card.linkText}
                         <ExternalLink className="ml-1 w-4 h-4" />

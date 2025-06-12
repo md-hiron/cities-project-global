@@ -30,7 +30,7 @@ export default function HebraicTeaching() {
   return (
     <section className="py-14">
       <div className="container mx-auto px-4">
-        <h2 className="text-3xl md:text-5xl font-sans font-bold whitespace-pre-line mb-14 max-w-6xl">
+        <h2 className="text-3xl md:text-5xl  font-bold whitespace-pre-line mb-14 max-w-6xl">
           {hebraicData.title}
         </h2>
 
@@ -47,7 +47,7 @@ export default function HebraicTeaching() {
                   className="rounded-md w-full h-auto object-cover"
                 />
               ) : (
-                <div className="space-y-6 text-base font-sans leading-relaxed">
+                <div className="space-y-6 text-base  leading-relaxed">
                   {col.paragraphs.map((text, pIndex) => (
                     <p key={pIndex}>{text}</p>
                   ))}

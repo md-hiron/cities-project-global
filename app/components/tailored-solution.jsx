@@ -46,8 +46,8 @@ export default function TailoredSolutions() {
                   height={400}
                   className="rounded-md mb-4 w-full h-auto"
                 />
-                <h3 className="font-bold font-sans text-lg mb-2">{item.title}</h3>
-                <p className="text-sm font-sans">{item.description}</p>
+                <h3 className="font-bold  text-lg mb-2">{item.title}</h3>
+                <p className="text-sm ">{item.description}</p>
               </div>
             </div>
           ))}

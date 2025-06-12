@@ -40,7 +40,7 @@ export default function LeaderTestimony() {
 
   return (
     <section className="py-16 lg:py-28 relative">
-      <h2 className="text-4xl font-sans font-bold text-center mb-14 max-w-[660px] mx-auto">Watch Our Community Share Their Leadership Circle Experiences</h2>
+      <h2 className="text-4xl  font-bold text-center mb-14 max-w-[660px] mx-auto">Watch Our Community Share Their Leadership Circle Experiences</h2>
 
       <AlumniSlider
         data={alumniData}

@@ -1,35 +1,31 @@
 import Image from 'next/image';
 import Link from 'next/link';
+import BoxLink from './sub-components/box-link';
 
-const partners = [
-  { src: '/partners/bgu.png', link: '#' },
-  { src: '/partners/cru.png', link: '#' },
-  { src: '/partners/fwe.png', link: '#' },
-  { src: '/partners/imb.png', link: '#' },
-  { src: '/partners/integrous.png', link: '#' },
-  { src: '/partners/leadership.png', link: '#' },
-  { src: '/partners/ywamkona.png', link: '#' },
-  { src: '/partners/uofn.png', link: '#' },
-  { src: '/partners/ncf.png', link: '#' },
-  { src: '/partners/seed.png', link: '#' },
-  { src: '/partners/wea.png', link: '#' },
-  { src: '/partners/cea.png', link: '#' },
-  { src: '/partners/gcu.png', link: '#' },
-];
-
-export default function PartnerLogosSection() {
+export default function PartnerLogosSection({
+  title = 'Partnering to Expand Our Mission',
+  subtitle = '',
+  logos = [],
+  ctaText = 'Email Us ↗',
+  ctaHref = 'mailto:info@example.com',
+  ctaSubText = 'Join us through partnering',
+  boxLink = false
+}) {
   return (
     <section className="lg:py-28 py-16 bg-white text-center">
       <div className="container mx-auto px-4">
-        <h2 className="text-3xl md:text-5xl font-sans font-bold mb-12">
-          Partnering to Expand Our Mission
-        </h2>
+        {title && (
+          <h2 className="text-3xl md:text-5xl font-bold">{title}</h2>
+        )}
+        { subtitle && (
+          <p>{subtitle}</p>
+        ) }
 
-        <div className="flex flex-wrap justify-center gap-6 md:gap-8 mb-12">
-          {partners.map((partner, index) => (
+        <div className="flex flex-wrap justify-center gap-6 md:gap-8 my-12">
+          {logos.map((partner, index) => (
             <Link
               key={index}
-              href={partner.link}
+              href={partner.link || '#'}
               className="flex items-center justify-center"
               target="_blank"
               rel="noopener noreferrer"
@@ -43,17 +39,26 @@ export default function PartnerLogosSection() {
               />
             </Link>
           ))}
+          { boxLink && 
+          <BoxLink 
+            classes="w-[185px] h-[180px] bg-black text-white text-left"
+            title={ctaText}
+            text={ctaSubText}
+            url={ctaHref}
+          /> }
+          
         </div>
 
-        <div>
-          <p className="font-bold font-sans text-xl mb-4">Join us through partnering</p>
+        {!boxLink && <p className="font-bold text-xl mb-4">{ctaSubText}</p>}
+
+        {!boxLink && (
           <Link
-            href="mailto:info@example.com"
-            className="inline-block px-8 py-2 bg-[#A1CF5F] text-black font-sans font-bold text-xl rounded-md hover:bg-[#92bc52] transition"
+            href={ctaHref}
+            className="inline-block px-8 py-2 bg-[#A1CF5F] text-black font-bold text-xl rounded-md hover:bg-[#92bc52] transition"
           >
-            Email Us ↗
+            {ctaText}
           </Link>
-        </div>
+        )}
       </div>
     </section>
   );

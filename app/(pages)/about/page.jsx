@@ -124,6 +124,22 @@ const advisoryBoardData = {
       }
     ]
 };
+
+const partners = [
+  { src: '/partners/bgu.png', link: '#' },
+  { src: '/partners/cru.png', link: '#' },
+  { src: '/partners/fwe.png', link: '#' },
+  { src: '/partners/imb.png', link: '#' },
+  { src: '/partners/integrous.png', link: '#' },
+  { src: '/partners/leadership.png', link: '#' },
+  { src: '/partners/ywamkona.png', link: '#' },
+  { src: '/partners/uofn.png', link: '#' },
+  { src: '/partners/ncf.png', link: '#' },
+  { src: '/partners/seed.png', link: '#' },
+  { src: '/partners/wea.png', link: '#' },
+  { src: '/partners/cea.png', link: '#' },
+  { src: '/partners/gcu.png', link: '#' },
+];
     
 
 export default function AboutUs() {
@@ -159,7 +175,9 @@ export default function AboutUs() {
         <Testimonial />
         <Branding />
         <VideoInterviewSection />
-        <PartnerLogosSection />
+        <PartnerLogosSection 
+          logos={partners}
+        />
     </>
     
   );

@@ -23,7 +23,7 @@ export default function LeadershipCircle() {
   return (
     <section className="lg:py-28 py-16">
       <div className="container mx-auto px-4">
-        <h2 className="text-4xl lg:text-6xl font-bold font-sans text-center mb-14 max-w-[850px] mx-auto">
+        <h2 className="text-4xl lg:text-6xl font-bold  text-center mb-14 max-w-[850px] mx-auto">
           {leadershipCircleData.heading}
         </h2>
 
@@ -41,7 +41,7 @@ export default function LeadershipCircle() {
           <div className="lg:w-2/4 w-full lg:px-10 max-lg:mb-8">
             <div className="max-w-[630px] mx-auto">
                 {leadershipCircleData.paragraphs.map((para, index) => (
-                <p key={index} className="mb-4 text-base md:text-lg font-sans">
+                <p key={index} className="mb-4 text-base md:text-lg ">
                     {para}
                 </p>
                 ))}

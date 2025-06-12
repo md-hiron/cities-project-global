@@ -45,7 +45,7 @@ export default function RenewalProjects() {
           {/* Top Section */}
           <div className="flex flex-wrap lg:-mx-4 mb-20">
             <div className="lg:w-1/2 w-full lg:px-4 mb-10 lg:mb-0">
-              <h2 className="text-3xl lg:text-5xl font-sans font-bold leading-tight max-w-[600px]">
+              <h2 className="text-3xl lg:text-5xl  font-bold leading-tight max-w-[600px]">
                 {content.heading}
               </h2>
             </div>
@@ -67,7 +67,7 @@ export default function RenewalProjects() {
           <hr className="border-[#393939] mb-16" />
 
           <div className="">
-            <h3 className="text-3xl lg:text-5xl font-sans font-bold leading-tight max-w-[600px] mb-20">
+            <h3 className="text-3xl lg:text-5xl  font-bold leading-tight max-w-[600px] mb-20">
               {content.focusHeading}
             </h3>
 
@@ -77,8 +77,8 @@ export default function RenewalProjects() {
               <div className="lg:w-2/5 w-full lg:px-4 mb-10 lg:mb-0">
                 <ul className="space-y-6 text-lg">
                   {content.focusAreas.map((item, index) => (
-                    <li key={index} className="font-sans text-xl">
-                      <span className="text-[#A1CF5F] font-sans font-bold text-4xl">{item.number}</span><br />
+                    <li key={index} className=" text-xl">
+                      <span className="text-[#A1CF5F]  font-bold text-4xl">{item.number}</span><br />
                       {item.text.split('\n').map((line, i) => (
                         <span key={i}>
                           {line}
@@ -102,7 +102,7 @@ export default function RenewalProjects() {
                 <p className="mt-10 text-xl text-gray-300 max-w-[610]">
                   {content.impactNote}
                 </p>
-                <button className="mt-5 bg-[#A1CF5F] text-black text-sm px-6 py-3 rounded font-bold font-sans transition">
+                <button className="mt-5 bg-[#A1CF5F] text-black text-sm px-6 py-3 rounded font-bold  transition">
                   {content.button.label} <span className="ml-1">{content.button.icon}</span>
                 </button>
               </div>

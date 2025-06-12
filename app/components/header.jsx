@@ -3,9 +3,8 @@
 import { useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
-import { Menu, X } from 'lucide-react';
+import { ChevronDown, Menu, X } from 'lucide-react';
 
-// Header content as JSON at the top
 const headerData = {
   logo: "/logo.svg",
   languageIcon: "/globe.svg",
@@ -14,7 +13,15 @@ const headerData = {
   navItems: [
     { name: "Home", path: "/" },
     { name: "About", path: "/about" },
-    { name: "What We Do", path: "/what-we-do" },
+    { 
+      name: "What We Do", 
+      path: "/what-we-do",
+      submenu: [
+        { name: "Education", path: "/what-we-do/education" },
+        { name: "Community Projects", path: "/what-we-do/community-projects" },
+        { name: "Partnerships", path: "/what-we-do/partnerships" }
+      ]
+    },
     { name: "Stories", path: "/stories" },
     { name: "Contact", path: "/contact" }
   ]
@@ -46,13 +53,27 @@ export default function Header() {
           <nav className="hidden lg:block">
             <ul className="flex text-sm font-light">
               {headerData.navItems.map((item) => (
-                <li key={item.name}>
+                <li key={item.name} className="relative group mx-3">
                   <Link
                     href={item.path}
-                    className="hover:text-[#A1CF5F] text-sm font-sans text-white block mx-3"
+                    className="hover:text-[#A1CF5F] flex items-center text-sm  text-white py-3"
                   >
-                    {item.name}
+                    {item.name} {item.submenu && <ChevronDown size={20} className='mt-[2px]' />}
                   </Link>
+                  {item.submenu && (
+                    <ul className="absolute left-0 top-8 mt-2 bg-[#0a0a0a] text-white rounded shadow-lg opacity-0 group-hover:opacity-100 invisible group-hover:visible transition-opacity duration-200 min-w-[180px] z-50">
+                      {item.submenu.map((sub) => (
+                        <li key={sub.name}>
+                          <Link
+                            href={sub.path}
+                            className="block px-4 py-2 hover:text-[#A1CF5F] text-sm"
+                          >
+                            {sub.name}
+                          </Link>
+                        </li>
+                      ))}
+                    </ul>
+                  )}
                 </li>
               ))}
             </ul>
@@ -60,11 +81,11 @@ export default function Header() {
 
           {/* Right Actions (desktop) */}
           <div className="hidden lg:flex items-center space-x-4">
-            <button className="text-sm font-sans text-white flex items-center hover:text-[#A1CF5F]">
+            <button className="text-sm  text-white flex items-center hover:text-[#A1CF5F]">
               <Image src={headerData.languageIcon} width={20} height={20} className="mr-1" alt="Language" />
               {headerData.languageText}
             </button>
-            <button className="px-5 py-3 text-sm font-sans font-bold text-white bg-[#A1CF5F] rounded hover:bg-[#94bf55]">
+            <button className="px-5 py-3 text-sm  font-bold text-white bg-[#A1CF5F] rounded hover:bg-[#94bf55]">
               {headerData.donateText}
             </button>
           </div>
@@ -82,26 +103,48 @@ export default function Header() {
             <X size={24} />
           </button>
         </div>
-        <ul className="flex flex-col space-y-4 px-6 text-sm font-sans">
+        <ul className="flex flex-col space-y-4 px-6 text-sm ">
           {headerData.navItems.map((item) => (
             <li key={item.name}>
-              <Link
-                href={item.path}
-                className="block py-2 hover:text-[#A1CF5F]"
-                onClick={() => setMenuOpen(false)}
-              >
-                {item.name}
-              </Link>
+              {item.submenu ? (
+                <details>
+                  <summary className="py-2 cursor-pointer hover:text-[#A1CF5F]">
+                    {item.name}
+                  </summary>
+                  <ul className="pl-4">
+                    {item.submenu.map((sub) => (
+                      <li key={sub.name}>
+                        <Link
+                          href={sub.path}
+                          className="block py-1 text-sm hover:text-[#A1CF5F]"
+                          onClick={() => setMenuOpen(false)}
+                        >
+                          {sub.name}
+                        </Link>
+                      </li>
+                    ))}
+                  </ul>
+                </details>
+              ) : (
+                <Link
+                  href={item.path}
+                  className="block py-2 hover:text-[#A1CF5F]"
+                  onClick={() => setMenuOpen(false)}
+                >
+                  {item.name}
+                </Link>
+              )}
             </li>
           ))}
+
           <li>
-            <button className="text-sm font-sans text-white flex items-center hover:text-[#A1CF5F]">
+            <button className="text-sm  text-white flex items-center hover:text-[#A1CF5F]">
               <Image src={headerData.languageIcon} width={20} height={20} className="mr-2" alt="Language" />
               {headerData.languageText}
             </button>
           </li>
           <li>
-            <button className="w-full px-5 py-3 text-sm font-sans font-bold text-white bg-[#A1CF5F] rounded hover:bg-[#94bf55]">
+            <button className="w-full px-5 py-3 text-sm  font-bold text-white bg-[#A1CF5F] rounded hover:bg-[#94bf55]">
               {headerData.donateText}
             </button>
           </li>

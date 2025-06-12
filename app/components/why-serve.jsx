@@ -1,6 +1,5 @@
 import VideoBanner from "./sub-components/video-banner";
 
-
 const serveContent = {
   backgroundImage: '/serve-bg.png',
   heading: 'Why We Serve You',
@@ -19,13 +18,13 @@ export default function WhyWeServe() {
     >
       <div className="container mx-auto px-4">
         <div className="text-center max-w-[1200px] mx-auto">
-          <h2 className="text-2xl md:text-4xl font-sans font-bold mb-12">
+          <h2 className="text-2xl md:text-4xl  font-bold mb-12">
             {serveContent.heading}
           </h2>
-          <p className="md:text-4xl text-2xl text-black font-sans font-normal">
+          <p className="md:text-4xl text-2xl text-black  font-normal">
             {serveContent.description}
           </p>
-          <p className="text-2xl md:text-4xl font-sans font-bold text-[#A1CF5F] mt-8">
+          <p className="text-2xl md:text-4xl  font-bold text-[#A1CF5F] mt-8">
             {serveContent.emphasis}
           </p>
         </div>

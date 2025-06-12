@@ -1,5 +1,3 @@
-'use client';
-
 import Image from 'next/image';
 
 export default function ImageCard({ items = [], classes = '' }) {
@@ -16,8 +14,8 @@ export default function ImageCard({ items = [], classes = '' }) {
               className="w-full h-full object-cover"
             />
           </div>
-          <h3 className="text-2xl font-bold font-sans text-black">{item.title}</h3>
-          <p className="font-sans text-black max-w-[250px] mx-auto">{item.description}</p>
+          <h3 className="text-2xl font-bold  text-black">{item.title}</h3>
+          <p className=" text-black max-w-[250px] mx-auto">{item.description}</p>
         </div>
       ))}
     </div>

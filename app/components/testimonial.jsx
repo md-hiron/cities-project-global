@@ -47,10 +47,10 @@ export default function Testimonial() {
     <section className="py-20 bg-white">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
-          <h2 className="text-3xl lg:text-5xl font-bold font-sans mb-2">
+          <h2 className="text-3xl lg:text-5xl font-bold  mb-2">
             {sectionData.title}
           </h2>
-          <p className="text-lg font-sans">{sectionData.subtitle}</p>
+          <p className="text-lg ">{sectionData.subtitle}</p>
         </div>
 
         <div className="flex flex-wrap lg:-mx-4 mb-12 justify-center">
@@ -76,7 +76,7 @@ export default function Testimonial() {
                     height={30}
                     className='mx-auto mb-3'
                 />
-              <p className="font-sans mb-6">
+              <p className=" mb-6">
                 {sectionData.testimonials[0].quote}
               </p>
               <div className="text-center">
@@ -86,7 +86,7 @@ export default function Testimonial() {
                     height={60}
                     className='mx-auto mb-2'
                 />
-                <p className="font-sans font-semibold text-xl text-[#2C2C2C]">{sectionData.testimonials[0].name}</p>
+                <p className=" font-semibold text-xl text-[#2C2C2C]">{sectionData.testimonials[0].name}</p>
                 <p className="text-sm text-[#5A5A5A] whitespace-pre-line">{sectionData.testimonials[0].role}</p>
               </div>
             </div>
@@ -103,7 +103,7 @@ export default function Testimonial() {
                     height={30}
                     className='mx-auto mb-3'
                 />
-                <p className="font-sans mb-6">
+                <p className=" mb-6">
                   {testimonial.quote}
                 </p>
                 <div className="text-center">
@@ -113,8 +113,8 @@ export default function Testimonial() {
                         height={60}
                         className='mx-auto mb-2'
                     />
-                  <p className="font-sans font-semibold text-xl text-[#2C2C2C] mb-2">{testimonial.name}</p>
-                  <p className="text-sm font-sans text-[#5A5A5A] whitespace-pre-line">{testimonial.role}</p>
+                  <p className=" font-semibold text-xl text-[#2C2C2C] mb-2">{testimonial.name}</p>
+                  <p className="text-sm  text-[#5A5A5A] whitespace-pre-line">{testimonial.role}</p>
                 </div>
               </div>
             </div>

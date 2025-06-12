@@ -60,10 +60,10 @@ export default function ProgramsSection() {
     <section className="py-16">
       <div className="container mx-auto px-4">
         <div className="flex flex-wrap mb-14">
-            <h2 className="w-full lg:w-1/3 text-3xl lg:text-5xl font-bold font-sans text-[#0E0E0E] lg:pr-5 max-lg:mb-4">
+            <h2 className="w-full lg:w-1/3 text-3xl lg:text-5xl font-bold  text-[#0E0E0E] lg:pr-5 max-lg:mb-4">
                 {programsData.heading}
             </h2>
-            <p className="text-2xl lg:text-4xl text-[#0E0E0E] lg:w-2/3 w-full max-w-[950px] font-sans font-bold">
+            <p className="text-2xl lg:text-4xl text-[#0E0E0E] lg:w-2/3 w-full max-w-[950px]  font-bold">
                 {programsData.subheading}
             </p>
         </div>
@@ -83,12 +83,12 @@ export default function ProgramsSection() {
                 />
                 )}
                 <div className="p-4 text-left flex-grow">
-                <p className="uppercase text-base font-sans font-bold mb-14">
+                <p className="uppercase text-base  font-bold mb-14">
                     {program.type}
                 </p>
-                <h3 className="font-bold font-sans lg:text-3xl text-2xl mb-1">{program.title}</h3>
+                <h3 className="font-bold  lg:text-3xl text-2xl mb-1">{program.title}</h3>
                 {program.description && (
-                    <p className="text-xl font-sans font-bold">{program.description}</p>
+                    <p className="text-xl  font-bold">{program.description}</p>
                 )}
                 </div>
             </div>
@@ -109,11 +109,11 @@ export default function ProgramsSection() {
                     className="rounded-full mr-3"
                 />
                 <div>
-                    <p className="font-bold font-sans">{testimonial.name}</p>
-                    <p className="text-sm font-sans">{testimonial.handle}</p>
+                    <p className="font-bold ">{testimonial.name}</p>
+                    <p className="text-sm ">{testimonial.handle}</p>
                 </div>
                 </div>
-                <p className="text-sm font-sans">{testimonial.text}</p>
+                <p className="text-sm ">{testimonial.text}</p>
             </div>
             </div>
         ))}

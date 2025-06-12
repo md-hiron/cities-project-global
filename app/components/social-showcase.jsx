@@ -48,10 +48,10 @@ export default function SocialMediaShowcase() {
       <div className="container mx-auto flex flex-wrap lg:flex-nowrap gap-8 items-start px-4">
         {/* Left: Text + Icons */}
         <div className="w-full lg:w-1/3">
-          <h2 className="text-3xl lg:text-5xl font-sans font-bold mb-4 leading-tight">
+          <h2 className="text-3xl lg:text-5xl  font-bold mb-4 leading-tight">
             See What’s<br />Happening in<br />Social Media
           </h2>
-          <p className="text-base font-sans mb-4">
+          <p className="text-base  mb-4">
             Stay connected with us through all major social media
           </p>
           <div className="flex gap-4 flex-wrap">

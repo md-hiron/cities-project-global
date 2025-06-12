@@ -24,17 +24,17 @@ export default function VideoInterviewSection() {
             {/* Overlay text section */}
             <div className="md:absolute top-0 left-0 h-full w-full  p-6 md:p-10 flex flex-col justify-between">
               <div className="text-white pt-10">
-                <h3 className="text-[#A1CF5F] lg:text-5xl text-3xl font-bold font-sans uppercase">
+                <h3 className="text-[#A1CF5F] lg:text-5xl text-3xl font-bold  uppercase">
                   {interviewData.title}
                 </h3>
-                <h2 className="whitespace-pre-line tg:text-5xl text-3xl font-bold font-sans leading-tight mb-6">
+                <h2 className="whitespace-pre-line tg:text-5xl text-3xl font-bold  leading-tight mb-6">
                   {interviewData.subtitle}
                 </h2>
                 
               </div>
               <div className="">
-                <p className="text-white font-sans font-bold lg:text-3xl text-2xl">{interviewData.name}</p>
-                <p className="text-sm text-white font-sans font-semibold">{interviewData.role}</p>
+                <p className="text-white  font-bold lg:text-3xl text-2xl">{interviewData.name}</p>
+                <p className="text-sm text-white  font-semibold">{interviewData.role}</p>
               </div>
             </div>
           </div>

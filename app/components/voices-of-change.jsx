@@ -51,8 +51,8 @@ export default function VoicesOfChangeSection() {
   return (
     <section className="lg:pb-28 pb-28">
         <div className="text-center px-4 lg:mb-24 mb-16">
-            <h2 className="text-3xl lg:text-5xl font-sans font-bold mb-5">{sectionData.heading}</h2>
-            <h3 className="text-2xl lg:text-4xl font-bold font-sans mb-4">{sectionData.subheading}</h3>
+            <h2 className="text-3xl lg:text-5xl  font-bold mb-5">{sectionData.heading}</h2>
+            <h3 className="text-2xl lg:text-4xl font-bold  mb-4">{sectionData.subheading}</h3>
             <p className="max-w-[630px] mx-auto">{sectionData.description}</p>
         </div>
         

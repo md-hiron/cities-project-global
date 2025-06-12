@@ -18,7 +18,7 @@ export default function PhilosophySection() {
   return (
     <section className="lg:py-28 py-16">
       <div className="container mx-auto px-4">
-        <h2 className="text-2xl md:text-4xl font-sans font-bold text-center mb-14">
+        <h2 className="text-2xl md:text-4xl  font-bold text-center mb-14">
           {philosophyContent.heading}
         </h2>
         <div className="flex flex-wrap lg:-mx-4 items-start">
@@ -33,10 +33,10 @@ export default function PhilosophySection() {
             </div>
           </div>
           <div className="lg:w-1/2 w-full lg:px-4">
-            <h3 className="text-2xl md:text-4xl font-sans font-normal text-[#252525] max-w-[680px] whitespace-pre-line max-lg:text-center">
+            <h3 className="text-2xl md:text-4xl  font-normal text-[#252525] max-w-[680px] whitespace-pre-line max-lg:text-center">
               {philosophyContent.subheading}
             </h3>
-            <p className="text-lg font-sans font-normal mt-5 max-lg:text-center">
+            <p className="text-lg  font-normal mt-5 max-lg:text-center">
               {philosophyContent.paragraph}
             </p>
           </div>
