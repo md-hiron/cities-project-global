@@ -1,5 +1,4 @@
 import HeroSection from "./components/hero";
-import Header from "./components/header";
 import ServeSection from "./components/serve";
 import WhyWeServe from "./components/why-serve";
 import PhilosophySection from "./components/philosophy";
@@ -11,7 +10,6 @@ import Subscribe from "./components/subscribe";
 export default function Home() {
   return (
     <>
-      <Header/>
       <HeroSection/>
       <ServeSection/>
       <WhyWeServe />

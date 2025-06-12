@@ -38,7 +38,7 @@ export default function InnerPageHeader() {
         <div className="flex items-center justify-between px-4 lg:px-0 border-y border-black">
 
           <div className="flex items-center space-x-2">
-            <Image src={headerData.logo} alt="Cities Project Global" width={80} height={46} className="max-w-full" />
+          <Link href="/"><Image src={headerData.logo} alt="Cities Project Global" width={80} height={46} className="max-w-full" /></Link>
           </div>
 
           <button

@@ -1,7 +1,7 @@
 'use client';
 
 import { usePathname } from 'next/navigation';
-import InnerPageHeader from './inner-page-header';
+import Header from './header';
 
 export default function ClientLayoutWrapper({ children }) {
   const pathname = usePathname();
@@ -9,7 +9,7 @@ export default function ClientLayoutWrapper({ children }) {
 
   return (
     <>
-      {!isHome && <InnerPageHeader/>}
+      {!isHome && <Header />}
       {children}
     </>
   );
