@@ -14,8 +14,13 @@ import Inquery from '@/app/components/inquery';
 import Subscribe from '@/app/components/subscribe';
 
 const videoData = {
-    videoThumbnail: '/outcome.png',
-    videoUrl: 'https://www.youtube.com/watch?v=bjxTIcuzB6k',
+  videoThumbnail: '/video-thumb.jpg',
+  videoUrl: 'https://www.youtube.com/watch?v=bjxTIcuzB6k',
+  title: 'CPG \nOutcomes',
+  text: 'For decades now, I have witnessed the near non-existence of the practical intersection between faith and work.',
+  speakerImage: '/speaker.png',
+  speakerName: 'Bob Varney',
+  speakerRole: 'Cities Project Global CEO, President'
 }
 
 export default function WhatWeDo() {
@@ -38,14 +43,20 @@ export default function WhatWeDo() {
 
        <CityPhases />
 
-       <section className="lg:pb-28 pb-16">
-        <div className="container">
-            <VideoBanner 
-                thumbnail={videoData.videoThumbnail}
-                videoUrl={videoData.videoUrl}
-            />
+      <section className='lg:py-28 py-16'>
+        <div className="container mx-auto px-4">
+          <VideoBanner 
+            backgroundImage={videoData.videoThumbnail}
+            videoUrl={videoData.videoUrl}
+            title={videoData.title}
+            description={videoData.text}
+            speakerImage={videoData.speakerImage}
+            speakerName={videoData.speakerName}
+            speakerRole={videoData.speakerRole}
+          />
         </div>
-       </section>
+      </section>
+       
 
        <CompletionOutcomes />
        <RenewalProjects />
