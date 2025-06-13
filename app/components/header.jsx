@@ -27,6 +27,10 @@ export default function Header() {
         submenu: [
           { name: "Leadership Circle", path: "/leadership-circle" },
           { name: "Vantagepoint", path: "/vantagepoint" },
+          { name: "Blogs", path: "/blogs" },
+          { name: "Single Post", path: "/single-post" },
+          { name: "Donate", path: "/donate" },
+          { name: "Book", path: "/book" },
         ]
       },
       { name: "Stories", path: "/stories" },
