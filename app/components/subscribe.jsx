@@ -45,7 +45,7 @@ export default function Subscribe() {
 
               <button
                 type="submit"
-                className="bg-[#A1CF5F] text-black  font-bold text-sm px-5 py-2 rounded flex items-center gap-1 transition"
+                className="bg-[#A1CF5F] text-black  font-bold text-sm px-6 py-3 rounded flex items-center gap-1 transition"
               >
                 {subscribeContent.form.buttonLabel}{' '}
                 <span>{subscribeContent.form.buttonIcon}</span>
